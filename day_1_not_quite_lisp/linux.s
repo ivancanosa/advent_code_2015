@@ -39,7 +39,7 @@
 
 
 # -- Common Status Codes --
-.equ EOF, 0
+.equ EOF, -1
 
 # -- Symbols lseek --
 .equ SEEK_SET, 0 # Seek from beginning of file

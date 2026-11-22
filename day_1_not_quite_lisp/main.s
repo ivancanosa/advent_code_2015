@@ -53,11 +53,11 @@ filename: .asciz "input"
 .lcomm buffer, BUFFER_SIZE
 
 
-.section .text
 
 
 ############################## _start ########################################
 
+.section .text
 .globl _start
 
 # Local variables
@@ -97,7 +97,7 @@ movl $BUFFER_SIZE     , %edx # Buffer size
 int  $LINUX_SYSCALL
 
 # Jump to end if EOF
-cmpl $EOF, %eax
+cmpl $0, %eax
 je computation_end
 
 # Otherwise, save readed bytes
