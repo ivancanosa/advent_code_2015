@@ -14,4 +14,7 @@ $(EXES): %: %.o
 clean:
 	rm -f $(EXES) *.o
 
-.PHONY: all clean
+run: main
+	./main
+
+.PHONY: all clean run
